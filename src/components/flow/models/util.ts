@@ -16,3 +16,9 @@ export const getBytesLength = (word:string) => {
   }
   return totalLength;
 };
+
+export const getWidth = (val:string) => {
+  let width = 30 + getBytesLength(val) * 9;
+  width = Math.ceil(width / 20) * 20;
+  return width;
+};

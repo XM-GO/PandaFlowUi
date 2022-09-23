@@ -30,18 +30,21 @@ let codeData = {
         ]
     },
     "nodeRed": {
-        nodes: [
-            {
-                id: 'node_1',
-                type: 'start-node',
-                x: 220,
-                y: 200,
-                text: 'start'
-            }
-        ],
-        edges: [
-
-        ]
+      "nodes": [
+        {
+          "id": "node_1",
+          "type": "start-node",
+          "x": 240,
+          "y": 200,
+          "properties": {},
+          "text": {
+            "x": 250,
+            "y": 200,
+            "value": "start"
+          }
+        }
+      ],
+      "edges": []
     }
 }
 

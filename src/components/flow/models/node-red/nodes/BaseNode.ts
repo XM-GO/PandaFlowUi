@@ -1,5 +1,5 @@
 import { h, NodeConfig, RectNode, RectNodeModel } from "@logicflow/core";
-import { getBytesLength } from '../../util';
+import {getWidth} from '../../util';
 
 
 class RedNodeModel extends RectNodeModel {
@@ -8,7 +8,7 @@ class RedNodeModel extends RectNodeModel {
    */
   initNodeData(data: any) {
     super.initNodeData(data)
-    this.width = 100;
+    this.width = 120;
     this.height = 30;
     this.radius = 5;
     this.text.editable = false;
@@ -20,10 +20,9 @@ class RedNodeModel extends RectNodeModel {
    */
   setAttributes() {
     if (this.text.value) {
-      let width = 30 + getBytesLength(this.text.value) * 9;
-      width = Math.ceil(width / 20) * 20;
-      if (width < 100) {
-        width = 100;
+      let width = getWidth(this.text.value);
+      if (width < 120) {
+        width = 120;
       }
       this.width = width;
     }
